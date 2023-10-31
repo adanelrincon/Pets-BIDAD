@@ -1,0 +1,28 @@
+footer {
+    position: fixed;
+    height: 10vh;
+    margin-top: 1em;
+    width: 100vw;
+    bottom: 0;
+    background-color: #333333;
+    border-radius: 20px 20px 0px 0px;
+    
+}
+
+.menu {
+    color: #E6E6E6;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-item {
+    font-size: 28px;
+}
+
+a{
+    color: #E6E6E6;
+}
+

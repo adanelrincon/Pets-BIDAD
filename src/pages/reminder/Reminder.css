@@ -1,0 +1,21 @@
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.calendar-item {
+    margin-top: 10vh;
+    width: 80vw;
+    height: 47vh;
+    background-color: #333333;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    position: fixed;
+}

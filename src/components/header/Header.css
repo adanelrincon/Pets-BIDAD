@@ -1,0 +1,10 @@
+header {
+    top: 0;
+    width: 100vw;
+    position: absolute;
+    margin-bottom: 1em;
+    color: #3E6C61;
+    background-color: #E6E6E6;
+    text-align: center;
+    text-transform: uppercase;
+}
