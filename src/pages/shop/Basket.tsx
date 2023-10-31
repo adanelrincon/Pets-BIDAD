@@ -29,15 +29,16 @@ export default function Basket() {
                                 </Card>
                             </div>
                         </div>
-
+                        <div className="buy-basket">
                         <div className="buy-container">
                             <div className="buy-item">
-                                <p>Basket Total: </p>
+                                <p>Basket Total: {item.price + "€"}</p>
                             </div>
                             <div className="button-basket-container">
                                 <button className="button-basket">Go Pay</button>
                                 <button className="button-basket">Delete Card</button>
                             </div>
+                        </div>
                         </div>
                     </div>
                 ) : (

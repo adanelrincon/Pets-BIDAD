@@ -24,6 +24,12 @@
     height: 270px;
 }
 
+.buy-basket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .buy-container {
     background-color: #333333;
     display: flex;
@@ -31,8 +37,28 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-
+    width: 85vw;
+    height: 20vh;
+    gap: 10px 30px;
+    border-radius: 20px;
 }
+
+.buy-item {
+    background-color: #3E6C61;
+    color: whitesmoke;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.button-basket-container{
+    display: flex;
+    gap: 10px 30px;
+}
+
 .button-basket{
     width: 35vw;
     background-color: #3E6C61;
