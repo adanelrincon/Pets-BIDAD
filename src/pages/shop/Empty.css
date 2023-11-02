@@ -1,3 +1,36 @@
-p{
-    color: black;
+.empty-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-item{
+    background-color: #333333;
+    color: whitesmoke;
+    margin-top: 20vh;
+    border-radius: 20px;
+    width: 90vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 24px;
+
+}
+
+.empty-button-item{
+    width: 50vw;
+    height: 10vh;
+    background-color: #3E6C61;
+    color: whitesmoke;
+    border-radius: 8px;
+    font-size: 22px;
+    border-color: #3E6C61;
+    
+}
+
+.empty-text{
+    margin-left: 10vw;
+    margin-right: 2vw;
 }

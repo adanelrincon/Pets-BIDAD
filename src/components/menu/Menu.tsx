@@ -9,7 +9,7 @@ export default function Menu() {
           <a href="/shop"><ShoppingOutlined /></a>
         </div>
         <div className="menu-item">
-          <a href="/basket-empty"><ShoppingCartOutlined /></a>
+          <a href="/empty"><ShoppingCartOutlined /></a>
         </div>
         <div className="menu-item">
           <a href="/home"><HomeOutlined /></a>

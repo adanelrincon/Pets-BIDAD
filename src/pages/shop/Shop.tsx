@@ -12,13 +12,6 @@ import { Card } from 'antd';
 const { Meta } = Card;
 const { Search } = Input;
 
-const ShearchBar: React.FC = () => (
-    <Space direction="vertical">
-        <Search placeholder="find the best quality" />
-    </Space>
-);
-
-
 export default function Shop() {
     const items = listItems;
     const [searchQuery, setSearchQuery] = useState('');
@@ -37,10 +30,8 @@ export default function Shop() {
                 <Header text="Shop" />
                 <div className="search-bar-container">
                     <div className="search-bar-item">
-                        <Search placeholder="Search products" onSearch={handleSearch} enterButton />
+                        <Search placeholder="Search products" onSearch={handleSearch} enterButton/>
                     </div>
-                    {/* <ShearchBar /> */}
-
                 </div>
                 <div className="card-container">
                     {filteredItems.map(item => (

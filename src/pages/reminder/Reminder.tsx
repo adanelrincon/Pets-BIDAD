@@ -4,26 +4,37 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 import type { Dayjs } from 'dayjs';
 import dayLocaleData from 'dayjs/plugin/localeData';
-import { Calendar, Col, Radio, Row, Select, Typography, theme, Button, Space } from 'antd';
+import { Calendar, Col, Radio, Row, Select, Typography, theme, List} from 'antd';
 import type { CalendarProps } from 'antd';
-
-
-
 import "./Reminder.css";
+import listItems from "../../services/reminderList";
 
 export default function Reminder() {
     return (
         <>
             <body>
                 <Header text="Reminder" />
-
-                <Space wrap>
-                    <Button type="primary">Primary Button</Button>
-                </Space>
-
-
-
-
+                <div className="reminder">
+                    <div className="reminder-container">
+                        <div className="reminder-list">
+                            <List className="reminder-list-item"
+                                header={<div>Reminder List</div>}
+                                bordered
+                                dataSource={listItems}
+                                renderItem={(item) => (
+                                    <List.Item className="reminder-list-item-description">
+                                        {item.description}
+                                        <br />
+                                        {item.date}
+                                    </List.Item>
+                                )}
+                            />
+                        </div>
+                        <div className="reminder-item">
+                            <button className="button-basket">Add Reminder</button>
+                        </div>
+                    </div>
+                </div>
                 <div className="calendar-container ">
                     <div className="calendar-item">
                         <RemindCalendar />
@@ -34,8 +45,6 @@ export default function Reminder() {
         </>
     );
 }
-
-
 
 dayjs.extend(dayLocaleData);
 
