@@ -48,7 +48,7 @@ export default function Reminder() {
 
 dayjs.extend(dayLocaleData);
 
-const RemindCalendar: React.FC = () => {
+const RemindCalendar : React.FC = () => {
     const { token } = theme.useToken();
 
     const onPanelChange = (value: Dayjs, mode: CalendarProps<Dayjs>['mode']) => {
@@ -56,7 +56,7 @@ const RemindCalendar: React.FC = () => {
     };
 
     const wrapperStyle: React.CSSProperties = {
-        width: 300,
+        width: '75vw',
         border: `1px solid ${token.colorBorderSecondary}`,
         borderRadius: token.borderRadiusLG,
     };

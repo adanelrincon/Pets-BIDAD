@@ -1,6 +1,7 @@
 import Header from "../../components/header/Header";
 import Menu from "../../components/menu/Menu";
 import "./Home.css";
+import petsItems1 from "../../services/petsData";
 import React from 'react';
 import { Carousel } from 'antd';
 import { Card } from 'antd';
@@ -19,20 +20,19 @@ export default function Home() {
   const onChange = (currentSlide: number) => {
     console.log(currentSlide);
   };
+
+  const items = petsItems1;
   return (
     <>
       <body>
-        <Header text="Home"/>
+        <Header text="Home" />
         <Carousel afterChange={onChange}>
-          <div>
-            <h3 style={contentStyle}>
-              
-
-
-
-
-
-            </h3>
+          <div className="home-container">
+            {items.map(item => (
+              <div className="home-item" key={item.id}>
+                <p>{item.pet}</p>
+              </div>
+            ))}
           </div>
           <div>
             <h3 style={contentStyle}>2</h3>
@@ -40,27 +40,9 @@ export default function Home() {
           <div>
             <h3 style={contentStyle}>3</h3>
           </div>
-          <div>
-            <h3 style={contentStyle}>4</h3>
-          </div>
         </Carousel>
         <Menu />
       </body>
     </>
   );
 }
-
-
-
-
-const { Meta } = Card;
-
-const App: React.FC = () => (
-  <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
-);

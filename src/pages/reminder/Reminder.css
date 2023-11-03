@@ -16,6 +16,10 @@
     align-items: center;
 }
 
+.RemindCalendar{
+    width: 80vw;
+}
+
 .reminder{
     display: flex;
     justify-content: center;
