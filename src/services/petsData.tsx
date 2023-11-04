@@ -1,4 +1,3 @@
-import { useState } from "react";
 import jasonimg from "../assets/img/jasonimg";
 
 const petsList1 = [
@@ -24,28 +23,6 @@ const petsList1 = [
   }
 ];
 
-const petsList2 = [
-    {
-      id: 1,
-      pet: "Marina",
-      avatar: jasonimg[5]
-    },
-    {
-      id: 2,
-      pet: "Adonay",
-      avatar: jasonimg[5]
-    },
-    {
-      id: 3,
-      pet: "Nare",
-      avatar: jasonimg[5]
-    },
-    {
-      id: 4,
-      pet: "Aridane",
-      avatar: jasonimg[5]
-    }
-  ];
 
 const petsItems1 = () => {
     return petsList1;
