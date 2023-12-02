@@ -16,6 +16,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    bottom: 0;
 }
 
 .menu-item {

@@ -1,0 +1,33 @@
+.pet-container{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+.pet-container>img{
+    width: 35vw;
+    border: solid #333333 4px;
+    border-radius: 30%;
+}
+
+.pet-item {
+    width: 70vw;
+    margin-top: 2vh;
+    background-color: #3E6C61;
+    border-radius: 20px;
+    color: white;
+    border: solid #333333 4px;
+}
+
+.pet-item-info {
+    margin-left: 1.7vw;
+}
+
+@media (min-width: 992px) and (max-width : 1920px){
+
+    .pet-item { width: 30vw; }
+    .pet-container>img{ width: 16vw; }
+}

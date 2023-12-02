@@ -49,10 +49,28 @@
     color: whitesmoke;
     background-color: aliceblue;
 }
-
-/* .reminder-list-item .reminder-list-item-description{
-    /* color: whitesmoke;
+.reminder-list-button{
+    margin-right: 10em;
+    background-color: #3E6C61;
+    color: white;
 }
+.calendar{ width: 75vw; }
+
 .reminder-list-item-description{
     color: whitesmoke;
-} */ 
+} 
+
+@media (min-width: 992px) and (max-width : 1920px){
+    .reminder-container{ width: 50vw; }
+
+    .reminder-list{ width: 45vw; }
+
+    .calendar-item { width: 50vw; }
+
+    .RemindCalendar{ width: 45vw; }
+
+    .calendar{ width: 45vw; }
+
+    .reminder-list-button{ margin-right: 100em; }
+
+}

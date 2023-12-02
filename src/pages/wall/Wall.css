@@ -34,6 +34,22 @@
     flex-direction: column;
 }
 
+.wall-item-add{
+    background-color: #3E6C61;
+    color: whitesmoke;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 1vh;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    border-color: #3E6C61;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .wall-button{
     width: 35vw;
     background-color: #3E6C61;

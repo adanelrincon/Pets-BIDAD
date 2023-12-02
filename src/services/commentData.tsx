@@ -52,7 +52,7 @@ export default function AddComent(){
 
   return (
     <div className="wall-container">
-      <div className="wall-item">
+      <div className="wall-item-add">
         <input type="text" name="content" className="wall-input" placeholder="Comment" value={newComment.content} onChange={handleChange} />
         <button onClick={addComment} className="wall-button">Add Comment</button>
       </div>

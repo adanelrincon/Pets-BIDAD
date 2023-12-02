@@ -6,22 +6,40 @@ body {
     margin-top: 12vh;   
     border-radius: 20px;
     height: 70vh;
-    width: 50%;
+    width: 90%;
     background-color: #333333;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .home-item {
     background-color: #3E6C61;
     border-radius: 30px;
-    width: 30vw;
+    width: 35vw;
     height: 26vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+.home-item-img{
+    width: 25vw; border-radius: 25px;
+
+}
+
+@media (min-width: 992px) and (max-width : 1920px){
+
+    .home-container { margin-top: 12vh; border-radius: 20px; height: 70vh; }
+
+    .home-item { width: 25vw; height: 30vh; }
+
+    .home-item>img { width: 20vw; height: 23vh;}
+
+    .reminder-list{ width: 45vw; }
+
+    .calendar-item { width: 50vw; }
+
+    .RemindCalendar{ width: 45vw; }
+
+    .calendar{ width: 45vw; }
+
+    .reminder-list-button{ margin-right: 100em; }
 }

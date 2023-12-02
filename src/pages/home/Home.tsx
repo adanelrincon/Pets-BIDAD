@@ -5,11 +5,11 @@ import petsItems2 from "../../services/petsData2";
 import React from 'react';
 import { Carousel } from 'antd';
 import "./Home.css";
+import { Link } from 'react-router-dom'; 
 
 const contentStyle: React.CSSProperties = {
   margin: 20,
   marginTop: '10vh',
-  height: '38em',
   color: '#fff',
   borderRadius: 20,
   textAlign: 'center',
@@ -33,29 +33,33 @@ export default function Home() {
       <body>
         <Header text="Home" />
         <Carousel afterChange={onChange}>
-          <div >
-            <div style={contentStyle}>
-              {items1.map(item => (
-                <div key={item.id} className="home-item">
-                  <img src={item.avatar} alt={item.pet} style={{ width: '30vw', height: '20vh', borderRadius: '30px' }}></img>
+        <div>
+          <div style={contentStyle} className="home-container">
+            {items1.map(item => (
+              // Usa Link para envolver la imagen y el párrafo
+              <Link key={item.id} to={`/pet/${item.id}`}>
+                <div className="home-item">
+                  <img src={item.avatar} alt={item.pet} className="home-item-img" />
                   <p>{item.pet}</p>
                 </div>
-              ))}
-            </div>
+              </Link>
+            ))}
           </div>
-          <div>
-            <div style={contentStyle}>
-              {items2.map(item => (
-                <div key={item.id} className="home-item">
-                  <a href="/shop">
-                  <img src={item.avatar} alt={item.pet} style={{ width: '30vw', height: '20vh', borderRadius: '30px' }}></img>
+        </div>
+        <div>
+          <div style={contentStyle}>
+            {items2.map(item => (
+              // Usa Link para envolver la imagen y el párrafo
+              <Link key={item.id} to={`/pet/${item.id}`}>
+                <div className="home-item">
+                  <img src={item.avatar} alt={item.pet} className="home-item-img" />
                   <p>{item.pet}</p>
-                  </a>
                 </div>
-              ))}
-            </div>
+              </Link>
+            ))}
           </div>
-        </Carousel>
+        </div>
+      </Carousel>
         <Menu />
       </body>
     </>

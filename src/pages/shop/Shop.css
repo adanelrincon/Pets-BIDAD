@@ -18,6 +18,7 @@
     align-content: center;
     align-items: center;
     justify-content: center;
+    border: solid #333333 4px;
 }
 
 .card {

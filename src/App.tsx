@@ -8,21 +8,28 @@ import Empty from './pages/shop/Empty';
 import Wall from './pages/wall/Wall';
 import Login from "./pages/user/Login";
 import Newaccount from "./pages/user/Newaccount";
+import Pet from "./pages/home/Pet";
+import EditPet from "./pages/home/EditPet";
+import { PetContextProvider } from './services/PetContext';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Newaccount />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/reminder" element={<Reminder />} />
-          <Route path="/basket/:itemId" element={<Basket />} />
-          <Route path="/empty" element={<Empty />} />
-          <Route path="/wall" element={<Wall />} />
-        </Routes>
+        <PetContextProvider>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/register" element={<Newaccount />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/reminder" element={<Reminder />} />
+            <Route path="/basket/:itemId" element={<Basket />} />
+            <Route path="/empty" element={<Empty />} />
+            <Route path="/wall" element={<Wall />} />
+            <Route path="/pet/:petId" element={<Pet />} />
+            <Route path="/pet-edit/:petId" element={<EditPet />} />
+          </Routes>
+        </PetContextProvider>
       </BrowserRouter>
     </>
   );

@@ -4,12 +4,42 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 import type { Dayjs } from 'dayjs';
 import dayLocaleData from 'dayjs/plugin/localeData';
-import { Calendar, Col, Radio, Row, Select, Typography, theme, List} from 'antd';
+import { Calendar, Col, Radio, Row, Select, Typography, theme, List } from 'antd';
 import type { CalendarProps } from 'antd';
 import "./Reminder.css";
 import listItems from "../../services/reminderList";
+import React, { useState } from 'react';
+import { Button, Modal } from 'antd';
+import { AddReminderForm } from './AddReminderForm';  // Asegúrate de importar el formulario correctamente
+
+interface ReminderItem {
+    id: number;
+    description: string;
+    date: string;
+}
 
 export default function Reminder() {
+    const [reminderList, setReminderList] = useState(listItems);
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const addReminder = (newReminder: ReminderItem) => {        setReminderList([...reminderList, newReminder]);
+        closeModal();
+    };
+
+    const deleteReminder = (id: number) => {        
+        const updatedList = reminderList.filter(item => item.id !== id);
+        setReminderList(updatedList);
+    };
+
+    const openModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const closeModal = () => {
+        setIsModalVisible(false);
+    };
+
+
     return (
         <>
             <body>
@@ -20,18 +50,27 @@ export default function Reminder() {
                             <List className="reminder-list-item"
                                 header={<div>Reminder List</div>}
                                 bordered
-                                dataSource={listItems}
+                                dataSource={reminderList}
                                 renderItem={(item) => (
                                     <List.Item className="reminder-list-item-description">
                                         {item.description}
                                         <br />
                                         {item.date}
+                                        <Button onClick={() => deleteReminder(item.id)} className="reminder-list-button">Delete</Button>
                                     </List.Item>
                                 )}
                             />
                         </div>
                         <div className="reminder-item">
-                            <button className="button-basket">Add Reminder</button>
+                            <Button className="button-basket" onClick={openModal}>Add Reminder</Button>
+                            <Modal
+                                title="Add Reminder"
+                                visible={isModalVisible}
+                                onCancel={closeModal}
+                                footer={null}
+                            >
+                                <AddReminderForm onAdd={addReminder} />
+                            </Modal>
                         </div>
                     </div>
                 </div>
@@ -48,7 +87,7 @@ export default function Reminder() {
 
 dayjs.extend(dayLocaleData);
 
-const RemindCalendar : React.FC = () => {
+const RemindCalendar: React.FC = () => {
     const { token } = theme.useToken();
 
     const onPanelChange = (value: Dayjs, mode: CalendarProps<Dayjs>['mode']) => {
@@ -56,13 +95,12 @@ const RemindCalendar : React.FC = () => {
     };
 
     const wrapperStyle: React.CSSProperties = {
-        width: '75vw',
         border: `1px solid ${token.colorBorderSecondary}`,
         borderRadius: token.borderRadiusLG,
     };
 
     return (
-        <div style={wrapperStyle}>
+        <div style={wrapperStyle} className="calendar">
             <Calendar
                 fullscreen={false}
                 headerRender={({ value, type, onChange, onTypeChange }) => {
