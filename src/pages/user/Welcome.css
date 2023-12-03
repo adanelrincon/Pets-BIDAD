@@ -1,10 +1,10 @@
-.login{
+.welcome{
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
-.login-container{
+.welcome-container{
     margin-top: 30vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
@@ -17,7 +17,7 @@
     border-radius: 20px;
 }
 
-.login-item{
+.welcome-item{
     background-color: #3E6C61;
     color: whitesmoke;
     font-size: 16px;
@@ -27,7 +27,7 @@
     border-color: #3E6C61;
 }
 
-.login-button{
+.welcome-button{
     width: 35vw;
     background-color: #3E6C61;
     color: whitesmoke;

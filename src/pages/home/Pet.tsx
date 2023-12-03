@@ -1,7 +1,7 @@
 import Header from "../../components/header/Header";
 import Menu from "../../components/menu/Menu";
 import "./Pet.css";
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import petsItems1 from "../../services/petsData";
 import petsItems2 from "../../services/petsData2";
 
@@ -20,10 +20,8 @@ export default function Pet() {
         // Manejar el caso en que la mascota no exista
         return <div>No se encontró la mascota</div>;
     }
-    const navigate = useNavigate();
-    const goToEdit = (petId: number) => {
-        navigate(`/pet-edit/${petId}`);
-    };
+
+    const url = `/pet-edit/${petId}`;
 
 
     return (
@@ -32,9 +30,7 @@ export default function Pet() {
                 <Header text="Pet" />
                 <div className="pet-container">
                     <img src={pet.avatar} alt={pet.pet} />
-
-                    <button onClick={() => goToEdit(pet.id)}>Update Pet</button>
-
+                    
                     <div className="pet-item">
                         <h2 className="pet-item-info">Description:</h2>
                         <div className="pet-item-info">

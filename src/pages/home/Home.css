@@ -2,44 +2,48 @@ body {
     background-color: #E6E6E6;
 }
 
-.home-container {
-    margin-top: 12vh;   
+a {text-decoration: none; color: white;}
+
+.home { margin-top: 12vh;  width: 100%; display: flex; justify-content: center; align-items: center;
+}
+
+.home-container { 
     border-radius: 20px;
     height: 70vh;
     width: 90%;
     background-color: #333333;
+    margin: 20;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-item {
     background-color: #3E6C61;
-    border-radius: 30px;
-    width: 35vw;
-    height: 26vh;
+    border-radius: 50%;
+    width: 40vw;
+    height: 22vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 10px;
 }
 .home-item-img{
-    width: 25vw; border-radius: 25px;
-
+    width: 30vw; 
+    border-radius: 50%;
+    border: solid 4px #333333;
 }
 
 @media (min-width: 992px) and (max-width : 1920px){
 
-    .home-container { margin-top: 12vh; border-radius: 20px; height: 70vh; }
+    .home-container {  border-radius: 80px; width: 90vw; margin-bottom: 20vh;}
 
-    .home-item { width: 25vw; height: 30vh; }
+    .home-item { width: 20vw; height: 32vh; font-size: 20px; padding-bottom: 14px;}
 
-    .home-item>img { width: 20vw; height: 23vh;}
+    .home-item>img { width: 15vw; height: 25vh;}
 
-    .reminder-list{ width: 45vw; }
-
-    .calendar-item { width: 50vw; }
-
-    .RemindCalendar{ width: 45vw; }
-
-    .calendar{ width: 45vw; }
-
-    .reminder-list-button{ margin-right: 100em; }
 }

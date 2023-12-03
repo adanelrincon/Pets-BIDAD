@@ -1,10 +1,7 @@
 import Header from "../../components/header/Header";
 import Menu from "../../components/menu/Menu";
-import jasonimg from "../../assets/img/jasonimg";
-import { AudioOutlined } from '@ant-design/icons';
-import { Input, Space } from 'antd';
-import React, { useEffect, useState } from 'react';
-import { Avatar, Divider, List, Skeleton } from 'antd';
+import { Input } from 'antd';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Shop.css";
 import listItems from "../../services/shopList";

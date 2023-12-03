@@ -1,5 +1,3 @@
-import jasonimg from "../assets/img/jasonimg";
-
 const items =[
     {
         id: 1,

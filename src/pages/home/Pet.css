@@ -1,5 +1,5 @@
 .pet-container{
-    margin-top: 10vh;
+    margin-top: 14vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,6 +9,7 @@
 
 .pet-container>img{
     width: 35vw;
+    height: 20vh;
     border: solid #333333 4px;
     border-radius: 30%;
 }
@@ -29,5 +30,5 @@
 @media (min-width: 992px) and (max-width : 1920px){
 
     .pet-item { width: 30vw; }
-    .pet-container>img{ width: 16vw; }
+    .pet-container>img{ width: 16vw; height:40vh; }
 }

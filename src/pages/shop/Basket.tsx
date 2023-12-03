@@ -6,14 +6,12 @@ import { Card } from 'antd';
 import "./Basket.css";
 const { Meta } = Card;
 
-const goBasket = () => {
-
-}
+const goBasket = () => {}
 
 export default function Basket() {
     const { itemId } = useParams(); // Obtener el ID del parámetro de la URL
     const item = getItemById(Number(itemId));
-    const price = item?.price;
+    //const price = item?.price;
     return (
         <>
             <body>
@@ -36,7 +34,9 @@ export default function Basket() {
                             </div>
                             <div className="button-basket-container">
                                 <button className="button-basket">Go Pay</button>
+                                <a href="/empty">
                                 <button className="button-basket">Delete Card</button>
+                                </a>
                             </div>
                         </div>
                         </div>

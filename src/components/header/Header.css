@@ -7,4 +7,16 @@ header {
     background-color: #E6E6E6;
     text-align: center;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-icon{
+    margin-left: 5vw;
+    font-size: 28px;
+}
+
+.user-icon-a{
+    color: #333333;
 }
