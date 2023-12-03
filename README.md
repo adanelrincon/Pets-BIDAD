@@ -16,5 +16,5 @@ And after that, you need to run:
 
 ## Figma Desing:
 
-You can view it here [FIGMA]([https://facebook.github.io/create-react-app/docs/getting-started](https://www.figma.com/file/ytNJd7RuHn20YWbnzaehC8/Untitled?type=design&node-id=0%3A1&mode=design&t=Wj4fnG0tD8s4Htpv-1)https://www.figma.com/file/ytNJd7RuHn20YWbnzaehC8/Untitled?type=design&node-id=0%3A1&mode=design&t=Wj4fnG0tD8s4Htpv-1).
+You can view it here [FIGMA]((https://www.figma.com/file/ytNJd7RuHn20YWbnzaehC8/Untitled?type=design&node-id=0%3A1&mode=design&t=Wj4fnG0tD8s4Htpv-1)https://www.figma.com/file/ytNJd7RuHn20YWbnzaehC8/Untitled?type=design&node-id=0%3A1&mode=design&t=Wj4fnG0tD8s4Htpv-1).
 
